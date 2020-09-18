@@ -1,0 +1,50 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class BackToSplash : MonoBehaviour
+{
+    public string sceneToLoad;
+    private GameData gameData;
+    private Board board;
+    private GameStartManager gameStart;
+
+    public void WinOK() {
+        StartCoroutine(WinCo());
+        
+    }
+
+    public void LoseOK() {
+        StartCoroutine(LoseCo());
+        
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        gameStart = FindObjectOfType<GameStartManager>();
+        board = FindObjectOfType<Board>();
+        gameData = FindObjectOfType<GameData>();
+    }
+
+    IEnumerator WinCo() {
+        yield return new WaitForSeconds(1.4f);
+        if (gameData != null) {
+            gameData.saveData.isActive[board.level + 1] = true;
+            gameData.Save();
+        }
+        SceneManager.LoadScene(sceneToLoad);
+    }
+
+    IEnumerator LoseCo() {
+        yield return new WaitForSeconds(1.4f);
+        SceneManager.LoadScene(sceneToLoad);
+        gameStart.PlayGame();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

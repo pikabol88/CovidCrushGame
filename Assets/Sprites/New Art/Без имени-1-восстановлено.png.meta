@@ -1,0 +1,1088 @@
+fileFormatVersion: 2
+guid: 47aeff7d5dcbbd843bd370aff2373859
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4627507694559128364
+    second: Pink 1
+  - first:
+      213: -3738844683066291146
+    second: DBlue 1
+  - first:
+      213: 533155736325760077
+    second: Gray 1
+  - first:
+      213: 6794490420149747209
+    second: Green  1
+  - first:
+      213: -771722128890590907
+    second: LBlue 1
+  - first:
+      213: -6770143328159855007
+    second: Orange 1
+  - first:
+      213: 7020242693683684957
+    second: Red 1
+  - first:
+      213: -4899308033843140782
+    second: White 1
+  - first:
+      213: -3490476286555938333
+    second: Pink 2
+  - first:
+      213: 3236429397514916936
+    second: DBlue 2
+  - first:
+      213: 3791883370760345387
+    second: Gray 2
+  - first:
+      213: 6201276098612952835
+    second: Green  2
+  - first:
+      213: 3520116669931564137
+    second: LBlue 2
+  - first:
+      213: 6222775737749812349
+    second: Orange 2
+  - first:
+      213: -4407036056447005247
+    second: Red 2
+  - first:
+      213: -3507735973120912992
+    second: White 2
+  - first:
+      213: 2786853940088378522
+    second: Pink 3
+  - first:
+      213: 8422719083620903529
+    second: DBlue 3
+  - first:
+      213: -2204699519505385020
+    second: Gray 3
+  - first:
+      213: 1502456022882466782
+    second: Green  3
+  - first:
+      213: 1302382780660797597
+    second: LBlue 3
+  - first:
+      213: -5704179714453431590
+    second: Orange 3
+  - first:
+      213: -6402313569956583444
+    second: Red 3
+  - first:
+      213: 4505018007434659616
+    second: White 3
+  - first:
+      213: -2215023488541906648
+    second: Pink 4
+  - first:
+      213: -5803684380112473439
+    second: DBlue 4
+  - first:
+      213: -679631998936863582
+    second: Gray 4
+  - first:
+      213: 2067664336516443782
+    second: Green  4
+  - first:
+      213: -2145164936920341455
+    second: LBlue 4
+  - first:
+      213: -3816187753832800040
+    second: Orange 4
+  - first:
+      213: 881448253625108711
+    second: Red 4
+  - first:
+      213: -5928173352964462352
+    second: White 4
+  - first:
+      213: -2456640377031641693
+    second: Pink 5
+  - first:
+      213: 3714850753349803584
+    second: DBlue 5
+  - first:
+      213: -5043750861125708857
+    second: Gray 5
+  - first:
+      213: -1494526268665406377
+    second: Green  5
+  - first:
+      213: 8923504229217473160
+    second: LBlue 5
+  - first:
+      213: -8192093011831443999
+    second: Orange 5
+  - first:
+      213: -7513456864918761727
+    second: White 5
+  - first:
+      213: -2387623252334888501
+    second: Red 5
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pink 1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1363
+        width: 236
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d49a66f44ac7cfb0800000000000000
+      internalID: -4627507694559128364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DBlue 1
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1368
+        width: 236
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63cc97be194fc1cc0800000000000000
+      internalID: -3738844683066291146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray 1
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1365
+        width: 237
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44a8a14156266700800000000000000
+      internalID: 533155736325760077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green  1
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 1364
+        width: 236
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ef1d2d901ea4e50800000000000000
+      internalID: 6794490420149747209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LBlue 1
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 1364
+        width: 236
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5490b2200da4a45f0800000000000000
+      internalID: -771722128890590907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange 1
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 1364
+        width: 238
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e0d86438e9b02a0800000000000000
+      internalID: -6770143328159855007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red 1
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 1365
+        width: 238
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d562c0af889ec6160800000000000000
+      internalID: 7020242693683684957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White 1
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1367
+        width: 243
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257ef850d49220cb0800000000000000
+      internalID: -4899308033843140782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink 2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1124
+        width: 237
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1a8ea8f465f8fc0800000000000000
+      internalID: -3490476286555938333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DBlue 2
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 1130
+        width: 237
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8441283c36b1aec20800000000000000
+      internalID: 3236429397514916936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray 2
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1127
+        width: 237
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2791efd5d97f9430800000000000000
+      internalID: 3791883370760345387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green  2
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 1126
+        width: 236
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ff1f381cb5f0650800000000000000
+      internalID: 6201276098612952835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LBlue 2
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 1126
+        width: 236
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ca33ff577f9d030800000000000000
+      internalID: 3520116669931564137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange 2
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 1126
+        width: 238
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d743f75509dbb5650800000000000000
+      internalID: 6222775737749812349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red 2
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 1127
+        width: 238
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd432f5e0017d2c0800000000000000
+      internalID: -4407036056447005247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White 2
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1128
+        width: 243
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1d44c97b4025fc0800000000000000
+      internalID: -3507735973120912992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink 3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 885
+        width: 237
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a949dd3a4e4eca620800000000000000
+      internalID: 2786853940088378522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DBlue 3
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 891
+        width: 236
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96aa02e816283e470800000000000000
+      internalID: 8422719083620903529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray 3
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 888
+        width: 237
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9386fc7755761e0800000000000000
+      internalID: -2204699519505385020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green  3
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 887
+        width: 236
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb3e8edacbc9d410800000000000000
+      internalID: 1502456022882466782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LBlue 3
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 887
+        width: 236
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d905fda1d3ef21210800000000000000
+      internalID: 1302382780660797597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange 3
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 887
+        width: 238
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada930195cea6d0b0800000000000000
+      internalID: -5704179714453431590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red 3
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 888
+        width: 238
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce72312aab96627a0800000000000000
+      internalID: -6402313569956583444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White 3
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 890
+        width: 243
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02781e7520a058e30800000000000000
+      internalID: 4505018007434659616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink 4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 237
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82920547fd7a241e0800000000000000
+      internalID: -2215023488541906648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DBlue 4
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 654
+        width: 237
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2b9e63ecb257fa0800000000000000
+      internalID: -5803684380112473439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray 4
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 651
+        width: 237
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac216d3c467196f0800000000000000
+      internalID: -679631998936863582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green  4
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 650
+        width: 236
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e6ec452c1d1bc10800000000000000
+      internalID: 2067664336516443782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LBlue 4
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 650
+        width: 236
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1346d3efad7da32e0800000000000000
+      internalID: -2145164936920341455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange 4
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 650
+        width: 238
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d0a998f47d2a0bc0800000000000000
+      internalID: -3816187753832800040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red 4
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 651
+        width: 238
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8863d34888b3c00800000000000000
+      internalID: 881448253625108711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White 4
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 653
+        width: 243
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8ed998eb5eabda0800000000000000
+      internalID: -5928173352964462352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pink 5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 412
+        width: 237
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5b52ac79248edd0800000000000000
+      internalID: -2456640377031641693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DBlue 5
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 418
+        width: 237
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ed10bf31dcd8330800000000000000
+      internalID: 3714850753349803584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray 5
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 416
+        width: 240
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c31803905ff00ab0800000000000000
+      internalID: -5043750861125708857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green  5
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 414
+        width: 236
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c55b8e640624be0800000000000000
+      internalID: -1494526268665406377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LBlue 5
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 414
+        width: 237
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882143651d7a6db70800000000000000
+      internalID: 8923504229217473160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orange 5
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 414
+        width: 239
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eda3de2fc6df4e80800000000000000
+      internalID: -8192093011831443999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White 5
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 411
+        width: 243
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f0c431ac6dab790800000000000000
+      internalID: -7513456864918761727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red 5
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 415
+        width: 238
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9bd1b5d457dded0800000000000000
+      internalID: -2387623252334888501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
