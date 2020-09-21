@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HelpManager : MonoBehaviour
-{
+public class HelpManager : MonoBehaviour {
     public GameObject bubbleHelp;
     public GameObject lockHelp;
     public GameObject iceHelp;
     public GameObject stoneHelp;
     public GameObject[] roolHelp;
     public GameObject rulesHelp;
+
+    public GameObject leftArrow;
+    public GameObject rightArrow;
 
     public int firstBubbleLevel;
     public int firstIceLevel;
@@ -21,9 +23,7 @@ public class HelpManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        //for (int i = 0; i < roolHelp.Length; i++) {
-        //    roolHelp[i].SetActive(false);
-        //}
+        leftArrow.SetActive(false);
     }
 
 
@@ -33,6 +33,12 @@ public class HelpManager : MonoBehaviour
             page++;
             currentRulePanel = roolHelp[page];
             currentRulePanel.SetActive(true);
+            if (page == roolHelp.Length - 1) {
+                rightArrow.SetActive(false);
+            } else {
+                rightArrow.SetActive(true);
+                leftArrow.SetActive(true);
+            }
         }
     }
 
@@ -42,6 +48,12 @@ public class HelpManager : MonoBehaviour
             page--;
             currentRulePanel = roolHelp[page];
             currentRulePanel.SetActive(true);
+            if (page == 0) {
+                leftArrow.SetActive(false);
+            } else {
+                leftArrow.SetActive(true);
+                rightArrow.SetActive(true);
+            }
         }
     }
 
@@ -55,7 +67,7 @@ public class HelpManager : MonoBehaviour
         if (level == 0) {
             ShowRules();
         }
-        if(level == firstIceLevel) {
+        if (level == firstIceLevel) {
             ShowIceHelpPanel();
         } else if (level == firstLockLevel) {
             ShowLockHelpPanel();
@@ -67,16 +79,17 @@ public class HelpManager : MonoBehaviour
             DeactivateAll();
         }
     }
-    
+
     public void ShowRules() {
         rulesHelp.SetActive(true);
+        roolHelp[0].SetActive(true);
         for (int i = 1; i < roolHelp.Length; i++) {
-                roolHelp[i].SetActive(false);
-            }
+            roolHelp[i].SetActive(false);
         }
+    }
 
     private void ShowBubbleHelpPanel() {
-        bubbleHelp.SetActive(true);        
+        bubbleHelp.SetActive(true);
     }
 
     private void ShowIceHelpPanel() {

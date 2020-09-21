@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class GameStartManager : MonoBehaviour
 {
-    public GameObject startPanel;    
+    public GameObject startPanel;
+    public GameObject canvasPanel;
     public GameObject levelPanel;
     public static GameObject staticStartPanel;
     public static GameObject staticLevelSelect;
     // Start is called before the first frame update
     void Start()
     {
+        //DontDestroyOnLoad(canvasPanel);
         DontDestroyOnLoad(startPanel);
         DontDestroyOnLoad(levelPanel);
         staticStartPanel = startPanel;
@@ -23,16 +25,6 @@ public class GameStartManager : MonoBehaviour
         levelPanel.SetActive(false);
     }
 
-    //public void Home() {
-    //    Debug.Log("HOME");
-    //    Debug.Log(staticStartPanel);
-    //    startPanel = staticStartPanel;
-        
-    //    levelPanel = staticLevelSelect;
-    //    levelPanel = GameObject.FindGameObjectWithTag("Level Select");
-    //    startPanel.SetActive(true);
-    //    levelPanel.SetActive(false);
-    //}
 
     public void PlayGame() {
         Debug.Log(startPanel);
