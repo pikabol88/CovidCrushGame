@@ -9,6 +9,7 @@ public class BlankGoal {
     public int numberCollected;
     public Sprite goalSprite;
     public string matchValue;
+   
 }
 
 public class GoalManager : MonoBehaviour
@@ -21,6 +22,8 @@ public class GoalManager : MonoBehaviour
     public GameObject goalGameParent;
     private EndGameManager endGame;
     private Board board;
+
+  //  public GameData gameData;
     // Start is called before the first frame update
     void Start()
     {
