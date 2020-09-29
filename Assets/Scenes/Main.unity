@@ -2455,7 +2455,6 @@ MonoBehaviour:
   firstStoneLevel: 12
   currentRulePanel: {fileID: 349325963}
   page: 0
-  fadePanel: {fileID: 1283428820}
 --- !u!1 &657602438
 GameObject:
   m_ObjectHideFlags: 0

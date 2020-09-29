@@ -9,7 +9,7 @@ public class ConfirmPanel : MonoBehaviour
     [Header("Level Information")]
     public string levelToLoad;
     public int level;
-    private GameData gameData; 
+    private GameData gameData;
     private int hightScore;
 
     [Header("UI stuff")]
@@ -34,7 +34,7 @@ public class ConfirmPanel : MonoBehaviour
     }
 
     void LoadData() {
-        if (gameData != null) {            
+        if (gameData != null) {
             starsActive = gameData.saveData.stars[level - 1];
             hightScore = gameData.saveData.hightScores[level - 1];
         } 

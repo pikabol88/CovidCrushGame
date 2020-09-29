@@ -21,10 +21,6 @@ public class HelpManager : MonoBehaviour {
     public GameObject currentRulePanel;
     public int page;
 
-
-    public GameObject fadePanel;
-    private bool isFirstLvl = false;
-    private bool isBlockHint = false;
     // Start is called before the first frame update
     void Start() {
         leftArrow.SetActive(false);
@@ -63,20 +59,13 @@ public class HelpManager : MonoBehaviour {
 
     public void Home() {
         rulesHelp.SetActive(false);
-        if (isBlockHint || isFirstLvl) {
-            fadePanel.SetActive(true);
-            isFirstLvl = false;
-        }
     }
 
 
     public void ShowHelpPanel(int level) {
         Debug.Log(level);
         if (level == 0) {
-            Debug.Log("SHOW");
             ShowRules();
-            fadePanel.SetActive(false);
-            isFirstLvl = true;
         }
         if (level == firstIceLevel) {
             ShowIceHelpPanel();
@@ -97,31 +86,21 @@ public class HelpManager : MonoBehaviour {
         for (int i = 1; i < roolHelp.Length; i++) {
             roolHelp[i].SetActive(false);
         }
-        rightArrow.SetActive(true);
-        leftArrow.SetActive(false);
     }
 
     private void ShowBubbleHelpPanel() {
-        isBlockHint = true;
-        fadePanel.SetActive(false);
         bubbleHelp.SetActive(true);
     }
 
     private void ShowIceHelpPanel() {
-        isBlockHint = true;
-        fadePanel.SetActive(false);
         iceHelp.SetActive(true);
     }
 
     private void ShowLockHelpPanel() {
-        isBlockHint = true;
-        fadePanel.SetActive(false);
         lockHelp.SetActive(true);
     }
 
     private void ShowStoneHelpPanel() {
-        isBlockHint = true;
-        fadePanel.SetActive(false);
         stoneHelp.SetActive(true);
     }
 
@@ -130,8 +109,6 @@ public class HelpManager : MonoBehaviour {
         stoneHelp.SetActive(false);
         lockHelp.SetActive(false);
         bubbleHelp.SetActive(false);
-        isBlockHint = false;
-
     }
 }
 

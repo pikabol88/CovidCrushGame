@@ -10,100 +10,67 @@ public class SaveData {
     public bool[] isActive;
     public int[] hightScores;
     public int[] stars;
-   
 }
 
-public class GameData : MonoBehaviour {
-
-    public static GameData gameData;
+public class GameData : MonoBehaviour
+{
     public SaveData saveData;
-    public GameObject red;
-    public GameObject green;
-    public GameObject blue;
-    public GameObject quit;
-
-    
-    // Use this for initialization
+    public static GameData gameData;
+    // Start is called before the first frame update
     void Awake() {
         if (gameData == null) {
             DontDestroyOnLoad(this.gameObject);
             gameData = this;
-
-            //green.SetActive(true);
-            //red.SetActive(false);
-            //blue.SetActive(false);
         } else {
             Destroy(this.gameObject);
-
-            //green.SetActive(false);
-            //red.SetActive(true);
-            //blue.SetActive(false);
         }
         Load();
     }
-
-    private void Start() {
-
-    }
+    
 
     public void Save() {
-
         //Create a binary formatter which can read binary files
         BinaryFormatter formatter = new BinaryFormatter();
 
         //Create a route from the program to the file
-        FileStream file = File.Create(Application.persistentDataPath + "/player.dat");
+        FileStream file = File.Open(Application.persistentDataPath + "/player.dat", FileMode.Create);
 
-        //Create a copy of save data
+        //Create a blank save data
         SaveData data = new SaveData();
         data = saveData;
-
-        //Actually save the data in the file
+       
+        //Save the data
         formatter.Serialize(file, data);
-
-        //Close the data stream
+        
+        //Close data stream
         file.Close();
 
         Debug.Log("Saved");
-
-       // green.SetActive(true);
-       // red.SetActive(false);
-       // blue.SetActive(true);
-
     }
 
     public void Load() {
-        //Check if the save game file exists
+        //Check if the save game file exist
         if (File.Exists(Application.persistentDataPath + "/player.dat")) {
-            //blue.SetActive(true);
-            //green.SetActive(false);
-            //red.SetActive(false);
             //Create a Binary Formatter
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/player.dat", FileMode.Open);
             saveData = formatter.Deserialize(file) as SaveData;
             file.Close();
             Debug.Log("Loaded");
-        } else {
-            saveData = new SaveData();
-            saveData.isActive = new bool[100];
-            saveData.stars = new int[100];
-            saveData.hightScores = new int[100];
-            saveData.isActive[0] = true;
         }
     }
 
     private void OnApplicationQuit() {
         Save();
-      //  quit.SetActive(true);
     }
-
     private void OnDisable() {
         Save();
     }
 
-    // Update is called once per frame
-    void Update() {
 
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

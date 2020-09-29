@@ -37,10 +37,7 @@ public class LevelButton : MonoBehaviour
 
     void LoadData() {
         if (gameData != null) {
-            if(gameData.saveData == null) {
-                Debug.Log("GS = NULL");
-            }
-            Debug.Log("size = " + gameData.saveData.isActive.Length);
+            Debug.Log(level);
             if (gameData.saveData.isActive[level - 1]) {
                 isActive = true;
             } else {
