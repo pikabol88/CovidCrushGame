@@ -38,6 +38,6 @@ MonoBehaviour:
     matchValue: Salmon Dot
   - numberNeeded: 15
     numberCollected: 3
-    goalSprite: {fileID: -6770143328159855007, guid: 47aeff7d5dcbbd843bd370aff2373859,
+    goalSprite: {fileID: -4993135451479456716, guid: c04aaf0ba0ceb51409637abfa90d6080,
       type: 3}
     matchValue: Orange Dot

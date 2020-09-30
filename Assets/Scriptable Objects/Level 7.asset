@@ -83,7 +83,7 @@ MonoBehaviour:
     matchValue: Red Dot
   - numberNeeded: 30
     numberCollected: 34
-    goalSprite: {fileID: -6770143328159855007, guid: 47aeff7d5dcbbd843bd370aff2373859,
+    goalSprite: {fileID: -4993135451479456716, guid: c04aaf0ba0ceb51409637abfa90d6080,
       type: 3}
     matchValue: Orange Dot
   - numberNeeded: 30

@@ -30,6 +30,7 @@ public class LevelSelectManager : MonoBehaviour
         page = (int)Mathf.Floor(currentLevel / 9);
         currentPanel = panels[page];
         panels[page].SetActive(true);
+        gameData.Save();
     }
     
     public void PageRight() {
