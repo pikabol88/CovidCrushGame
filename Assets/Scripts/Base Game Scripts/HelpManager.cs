@@ -24,7 +24,6 @@ public class HelpManager : MonoBehaviour {
 
     public GameObject fadePanel;
     private bool isFirstLvl = false;
-    private bool isBlockHint = false;
     // Start is called before the first frame update
     void Start() {
         leftArrow.SetActive(false);
@@ -63,7 +62,7 @@ public class HelpManager : MonoBehaviour {
 
     public void Home() {
         rulesHelp.SetActive(false);
-        if (isBlockHint || isFirstLvl) {
+        if ( isFirstLvl) {
             fadePanel.SetActive(true);
             isFirstLvl = false;
         }
@@ -102,26 +101,18 @@ public class HelpManager : MonoBehaviour {
     }
 
     private void ShowBubbleHelpPanel() {
-        isBlockHint = true;
-        fadePanel.SetActive(false);
         bubbleHelp.SetActive(true);
     }
 
     private void ShowIceHelpPanel() {
-        isBlockHint = true;
-        fadePanel.SetActive(false);
         iceHelp.SetActive(true);
     }
 
     private void ShowLockHelpPanel() {
-        isBlockHint = true;
-        fadePanel.SetActive(false);
         lockHelp.SetActive(true);
     }
 
     private void ShowStoneHelpPanel() {
-        isBlockHint = true;
-        fadePanel.SetActive(false);
         stoneHelp.SetActive(true);
     }
 
@@ -130,7 +121,6 @@ public class HelpManager : MonoBehaviour {
         stoneHelp.SetActive(false);
         lockHelp.SetActive(false);
         bubbleHelp.SetActive(false);
-        isBlockHint = false;
 
     }
 }

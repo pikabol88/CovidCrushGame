@@ -38,6 +38,8 @@ public class BackToSplash : MonoBehaviour
 
     IEnumerator LoseCo() {
         yield return new WaitForSeconds(1.4f);
+        gameData.saveData.stars[board.level] = 0;
+        gameData.saveData.hightScores[board.level] = 0;
         SceneManager.LoadScene(sceneToLoad);
         gameStart.PlayGame();
     }

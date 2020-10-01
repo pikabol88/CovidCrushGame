@@ -23,8 +23,14 @@ public class LevelSelectManager : MonoBehaviour
         if (gameData != null) {
             for(int i = 0; i < gameData.saveData.isActive.Length; i++) {
                 if (gameData.saveData.isActive[i]) {
-                    currentLevel = i;
+                    currentLevel = i;                    
                 }
+            }
+            if (gameData.saveData.stars[currentLevel] != 0) {
+                //Debug.Log("stars and score to zero");
+                //gameData.saveData.stars[currentLevel] = 0;
+                //gameData.saveData.hightScores[currentLevel] = 0;
+                //gameData.Save();
             }
         }
         page = (int)Mathf.Floor(currentLevel / 9);

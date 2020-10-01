@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 878, y: 492}
   m_MaxSize: {x: 16003, y: 14042}
   vertical: 0
-  controlID: 127
+  controlID: 431
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 602, y: 492}
   m_MaxSize: {x: 12002, y: 14042}
   vertical: 1
-  controlID: 128
+  controlID: 384
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 602, y: 221}
   m_MaxSize: {x: 12002, y: 4021}
   vertical: 0
-  controlID: 129
+  controlID: 364
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,8 +187,8 @@ MonoBehaviour:
     y: 0
     width: 406
     height: 460
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -926,19 +926,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Packages
+    - Assets/Scripts/Base Game Scripts
   m_ViewMode: 1
   m_StartGridSize: 46
   m_LastFolders:
-  - Packages
+  - Assets/Scripts/Base Game Scripts
   m_LastFoldersGridSize: 46
   m_LastProjectPath: C:\Users\Public\CovidCrushGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 62}
-    m_SelectedIDs: ffffff7f
-    m_LastClickedID: 2147483647
+    m_SelectedIDs: b0460000
+    m_LastClickedID: 18096
     m_ExpandedIDs: 0000000096460000984600009a460000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -992,8 +992,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: fc2b0000
+    m_LastClickedInstanceID: 11260
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000423a00006a3a000038430000ea390000cc3a0000d23a0000a23d0000a63d000020410000743a0000e83a00008c9b0000e63a0000186600007c3b0000764800007e3a0000aa3b00006c3f0000f83d0000f07700004c2d010064490000d03a000058490000504000003a85010014460000121f02006e22020072220200403302007c930300fec2040028830100280d01006e3c0000b03e0000324f0000ea4f0000165000009c510000765700007a5700001639020000000000
     m_RenameOverlay:
@@ -1085,5 +1085,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 11260
   m_LastVerticalScrollValue: 0

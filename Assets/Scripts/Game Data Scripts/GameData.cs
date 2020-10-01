@@ -17,11 +17,6 @@ public class GameData : MonoBehaviour {
 
     public static GameData gameData;
     public SaveData saveData;
-    public GameObject red;
-    public GameObject green;
-    public GameObject blue;
-    public GameObject quit;
-
     
     // Use this for initialization
     void Awake() {
@@ -75,10 +70,6 @@ public class GameData : MonoBehaviour {
     public void Load() {
         //Check if the save game file exists
         if (File.Exists(Application.persistentDataPath + "/player.dat")) {
-            //blue.SetActive(true);
-            //green.SetActive(false);
-            //red.SetActive(false);
-            //Create a Binary Formatter
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/player.dat", FileMode.Open);
             saveData = formatter.Deserialize(file) as SaveData;
