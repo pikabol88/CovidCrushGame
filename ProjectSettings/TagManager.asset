@@ -23,6 +23,7 @@ TagManager:
   - Level Select
   - Game Start Manager
   - Background
+  - Arrow
   layers:
   - Default
   - TransparentFX
