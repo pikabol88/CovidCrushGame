@@ -13,8 +13,11 @@ public class CameraScaler : MonoBehaviour
     void Start()
     {
         board = FindObjectOfType<Board>();
+        //if (board.height == 9 && board.width == 9) {
+        //    padding = 1.5f;
+        //}
         if (board.height == board.width) {
-            padding = 1;
+            padding = 1.5f;
         }
         if (board != null) {
             RepositionCamera(board.width - 1, board.height - 1);
