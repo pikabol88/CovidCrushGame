@@ -19,6 +19,7 @@ public class FindMatches : MonoBehaviour {
 
     public void FindAllMatches() {
         StartCoroutine(FindAllMatchesCo());
+        
     }
 
     //
@@ -114,6 +115,7 @@ public class FindMatches : MonoBehaviour {
                         if (upDot != null && downDot != null) {
                             Dot upDotDot = upDot.GetComponent<Dot>();
                             Dot downDotDot = downDot.GetComponent<Dot>();
+
                             if (upDot.tag == currentDot.tag && downDot.tag == currentDot.tag) {
                                 currentMatches.Union(IsColomnBomb(upDotDot, currentDotDot, downDotDot));
                                 currentMatches.Union(IsRowBomb( upDotDot, currentDotDot, downDotDot));
@@ -125,6 +127,8 @@ public class FindMatches : MonoBehaviour {
                 }
             }          
         }
+
+       
     }
 
 
@@ -220,29 +224,20 @@ public class FindMatches : MonoBehaviour {
         }
     }
 
-    public void CheckBombs(MatchType matchType) {
+    public int CheckBombs(MatchType matchType) {
         //Did the player move something?
         if (board.currentDot != null) {
             //Is the piece they moved matched?
             if (board.currentDot.isMatched && board.currentDot.tag == matchType.color) {
                 //make it unmatched
                 board.currentDot.isMatched = false;
-                //Decide what kind of bomb to make
-                /*
-                int typeOfBomb = Random.Range(0, 100);
-                if(typeOfBomb < 50){
-                    //Make a row bomb
-                    board.currentDot.MakeRowBomb();
-                }else if(typeOfBomb >= 50){
-                    //Make a column bomb
-                    board.currentDot.MakeColumnBomb();
-                }
-                */
                 if ((board.currentDot.swipeAngle > -45 && board.currentDot.swipeAngle <= 45)
                    || (board.currentDot.swipeAngle < -135 || board.currentDot.swipeAngle >= 135)) {
                     board.currentDot.MakeRowBomb();
+                    return 1;
                 } else {
                     board.currentDot.MakeColumnBomb();
+                    return 1;
                 }
             }
             //Is the other piece matched?
@@ -269,12 +264,15 @@ public class FindMatches : MonoBehaviour {
                     if ((board.currentDot.swipeAngle > -45 && board.currentDot.swipeAngle <= 45)
                    || (board.currentDot.swipeAngle < -135 || board.currentDot.swipeAngle >= 135)) {
                         otherDot.MakeRowBomb();
+                        return 2;
                     } else {
                         otherDot.MakeColumnBomb();
+                        return 2;
                     }
                 }
             }
 
         }
+        return 0;
     }
 }

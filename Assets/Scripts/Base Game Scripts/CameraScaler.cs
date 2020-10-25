@@ -13,9 +13,9 @@ public class CameraScaler : MonoBehaviour
     void Start()
     {
         board = FindObjectOfType<Board>();
-        //if (board.height == 9 && board.width == 9) {
-        //    padding = 1.5f;
-        //}
+        if (board.height - board.width ==1) {
+            padding = 4f; ;
+        }
         if (board.height == board.width) {
             padding = 1.5f;
         }

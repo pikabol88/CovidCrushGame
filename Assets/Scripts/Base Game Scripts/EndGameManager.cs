@@ -81,8 +81,6 @@ public class EndGameManager : MonoBehaviour
     private bool SlimeDeadlockCheck() {
         if(board.slimeTiles != null) {
             if( SlimeCounter() >= board.width * board.height - 3) {
-                Debug.Log("slime = " + board.slimeTiles.Length);
-                Debug.Log("size" + (board.width * board.height - 3));
                 return true;
             }
         }
@@ -104,7 +102,6 @@ public class EndGameManager : MonoBehaviour
     } 
 
     public void WinGame() {
-        Debug.Log("isWinPanel");
         isWin = true;
         youWinPanel.SetActive(true);
         board.currentState = GameState.WIN;
@@ -117,8 +114,6 @@ public class EndGameManager : MonoBehaviour
     public IEnumerator LoseGameCo() {
         yield return new WaitForSeconds(2f);
         if (isWin != true) {
-            Debug.Log(isWin);
-            Debug.Log("LoseGame");
             tryAgainPanel.SetActive(true);
             board.currentState = GameState.LOSE;
             currentCounterValue = 0;
@@ -126,7 +121,6 @@ public class EndGameManager : MonoBehaviour
             FadePanelController fade = FindObjectOfType<FadePanelController>();
             fade.GameOver();
         } else if (isWin) {
-            Debug.Log("isWin - setActive");
             tryAgainPanel.SetActive(false);
         }
         

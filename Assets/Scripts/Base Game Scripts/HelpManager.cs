@@ -72,7 +72,6 @@ public class HelpManager : MonoBehaviour {
     public void ShowHelpPanel(int level) {
         Debug.Log(level);
         if (level == 0) {
-            Debug.Log("SHOW");
             ShowRules();
             fadePanel.SetActive(false);
             isFirstLvl = true;

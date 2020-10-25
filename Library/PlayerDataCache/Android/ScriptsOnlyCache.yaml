@@ -305,7 +305,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: 69aed121cf94ecd2af947864106030bf
+      Hash: 713367d13960357b516d778e1ef39044
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HintManager
@@ -871,4 +871,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Splash.unity
   - Assets/Scenes/Main.unity
-  playerPath: "C:/Users/\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C/Desktop/Builds/cvd_v2.1.apk"
+  playerPath: "C:/Users/\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C/Desktop/Builds/cvd_v3.0_test.apk"

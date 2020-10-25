@@ -6,7 +6,7 @@ public class HintManager : MonoBehaviour
 {
     private Board board;
     public float hintDelay;
-    private float hintDelaySeconds;
+    public float hintDelaySeconds;
     public GameObject hintParticle;
     public GameObject currentHint;
 
@@ -17,7 +17,7 @@ public class HintManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() {
+    public void Update() {
         hintDelaySeconds -= Time.deltaTime;
         if (hintDelaySeconds <= 0 && currentHint == null) {
             MarkHint();

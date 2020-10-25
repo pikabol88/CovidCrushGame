@@ -279,6 +279,7 @@ public class Dot : MonoBehaviour
             isRowBomb = true;
             GameObject arrow = Instantiate(rowArrow, transform.position, Quaternion.identity);
             arrow.transform.parent = this.transform;
+
         }
     }
 

@@ -73,6 +73,7 @@ public class Board : MonoBehaviour {
     private SoundManager soundManager;
     private GoalManager goalManager;
     private HelpManager helpManager;
+    private HintManager hintManager;
     public float refillDelay = 0.5f;
     public int[] scoreGoals;
     private bool makeSlime = true;
@@ -104,6 +105,7 @@ public class Board : MonoBehaviour {
         soundManager = FindObjectOfType<SoundManager>();
         scoreManager = FindObjectOfType<ScoreManager>();
         helpManager = FindObjectOfType<HelpManager>();
+        hintManager = FindObjectOfType<HintManager>();
         breakableTiles = new BackgroundTile[width, height];
         lockTiles = new BackgroundTile[width, height];
         concreteTiles = new BackgroundTile[width, height];
@@ -313,12 +315,14 @@ public class Board : MonoBehaviour {
                 if (currentDot != null && currentDot.isMatched && currentDot.tag == typeOfMatch.color) {
                     currentDot.isMatched = false;
                     currentDot.MakeColorBomb();
+                    DamageBreakable(currentDot.column, currentDot.row);
                 } else {
                     if (currentDot.otherDot != null) {
                         Dot otherDot = currentDot.otherDot.GetComponent<Dot>();
                         if (otherDot.isMatched && otherDot.tag == typeOfMatch.color) {
                             otherDot.isMatched = false;
                             otherDot.MakeColorBomb();
+                            DamageBreakable(otherDot.column, otherDot.row);
                         }
                     }
                 }
@@ -328,15 +332,42 @@ public class Board : MonoBehaviour {
                 if (currentDot != null && currentDot.isMatched && currentDot.tag == typeOfMatch.color) {
                     currentDot.isMatched = false;
                     currentDot.MakeAdjacentBomb();
+                    DamageBreakable(currentDot.column, currentDot.row);
                 } else if (currentDot.otherDot != null) {
                     Dot otherDot = currentDot.otherDot.GetComponent<Dot>();
                     if (otherDot.isMatched && otherDot.tag == typeOfMatch.color) {
                         otherDot.isMatched = false;
                         otherDot.MakeAdjacentBomb();
+                        DamageBreakable(otherDot.column, otherDot.row);
                     }
                 }
             } else if (typeOfMatch.type == 3) {
-                findMatches.CheckBombs(typeOfMatch);
+                switch (findMatches.CheckBombs(typeOfMatch)) {                   
+                    case 1:
+                        Debug.Log("Тип бомбы линейный - уничтожить лед на бомбе!");
+                        Debug.Log(currentDot.column + currentDot.row);
+                        DamageBreakable(currentDot.column, currentDot.row);
+                        break;
+                    case 2:
+                        Debug.Log("Тип бомбы линейный - уничтожить лед на бомбе!");
+                        Dot otherDot = currentDot.otherDot.GetComponent<Dot>();
+                        Debug.Log(otherDot.column + otherDot.row);
+                        DamageBreakable(otherDot.column, otherDot.row);
+                        break;
+                    default:
+                        Debug.Log("НУУУУУУУУУУУУУу");
+                        break;
+                }
+            }
+        }
+    }
+
+    public void DamageBreakable(int column, int row) {
+        if (breakableTiles[column, row] != null) {
+            //if it does, give one damage.
+            breakableTiles[column, row].TakeDamage(1);
+            if (breakableTiles[column, row].hitPoints <= 0) {
+                breakableTiles[column, row] = null;
             }
         }
     }
@@ -417,6 +448,11 @@ public class Board : MonoBehaviour {
             }
         }
         StartCoroutine(DecreaseRowCo2());
+        hintManager.hintDelaySeconds = hintManager.hintDelay;
+        hintManager.Update();
+        CheckToMakeBombs();
+        
+        
     }
 
     private void DamageConcrete(int column, int row) {        
@@ -515,7 +551,9 @@ public class Board : MonoBehaviour {
             }
         }
         yield return new WaitForSeconds(refillDelay * 0.5f);
-        Debug.Log("Refilling the board");
+        hintManager.hintDelaySeconds = hintManager.hintDelay;
+        hintManager.Update();
+        //   Debug.Log("Refilling the board");
         StartCoroutine(FillBoardCo());
     }
 
@@ -578,19 +616,29 @@ public class Board : MonoBehaviour {
         yield return new WaitForSeconds(refillDelay);
         RefillBoard();
         yield return new WaitForSeconds(refillDelay);
+        hintManager.hintDelaySeconds = hintManager.hintDelay;
+        hintManager.Update();
         while (MatchesOnBoard()) {
-            Debug.Log("MATCHES AT");
+            // Debug.Log("MATCHES AT");
+            CheckToMakeBombs();
             streakValue++;
             DestroyMatches();
+            //PROBLEM
+            hintManager.hintDelaySeconds = hintManager.hintDelay;
+            hintManager.Update();
+            MatchesOnBoard();
             yield break;
         }
         currentDot = null;
         CheckToMakeSlime();
+        //to deside slime provlem
+        yield return new WaitForSeconds(refillDelay);
         if (IsDeadlocked()) {
             StartCoroutine(ShuffleBoard());
         }
         yield return new WaitForSeconds(refillDelay);
-        Debug.Log("Done Refilling");
+       
+        //  Debug.Log("Done Refilling");
         System.GC.Collect();
         if (currentState != GameState.PAUSE) {
             currentState = GameState.MOVE;
@@ -598,7 +646,7 @@ public class Board : MonoBehaviour {
         currentState = GameState.MOVE;
         streakValue = 1;
         makeSlime = true;
-
+       
     }
 
     private void CheckToMakeSlime() {
@@ -606,6 +654,7 @@ public class Board : MonoBehaviour {
             for(int j = 0; j < height; j++) {
                 if(slimeTiles[i,j]!=null && makeSlime) {
                     MakeNewSlime();
+                    hintManager.Update();
                     return;
                 }
             }
@@ -752,7 +801,7 @@ public class Board : MonoBehaviour {
     public bool SwitchAndCheck(int column, int row, Vector2 direction) {
         if (!concreteTiles[column, row] && !lockTiles[column, row] && !slimeTiles[column, row]) {
             SwitchPieces(column, row, direction);
-            if (CheckForMatches(column, row)) {
+            if (CheckForMatches()/*CheckForMatches(column, row)*/) {
                 SwitchPieces(column, row, direction);
                 return true;
             }

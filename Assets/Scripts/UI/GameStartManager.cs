@@ -17,9 +17,7 @@ public class GameStartManager : MonoBehaviour
         DontDestroyOnLoad(levelPanel);
         staticStartPanel = startPanel;
         staticLevelSelect = levelPanel;
-        Debug.Log(staticStartPanel);
-        //startPanel = GameObject.FindGameObjectWithTag("Start Panel");
-        //levelPanel = GameObject.FindGameObjectWithTag("Level Select");
+
         startPanel.SetActive(true);
         staticStartPanel = startPanel;
         levelPanel.SetActive(false);
@@ -27,21 +25,15 @@ public class GameStartManager : MonoBehaviour
 
 
     public void PlayGame() {
-        Debug.Log(startPanel);
-        Debug.Log(levelPanel);
         if (startPanel != null) {
             startPanel.SetActive(false);
-            Debug.Log("startPanel = false");
         }
         levelPanel.SetActive(true);
     }
 
     public IEnumerator PlayGameCo() {
-        Debug.Log(startPanel);
-        Debug.Log(levelPanel);
         if (startPanel != null) {
             startPanel.SetActive(false);
-            Debug.Log("startPanel = false");
         }
         levelPanel.SetActive(true);
         yield return new WaitForSeconds(2f);

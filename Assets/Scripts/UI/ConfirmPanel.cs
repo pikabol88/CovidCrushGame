@@ -72,7 +72,6 @@ public class ConfirmPanel : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         confirmPanelBackground.SetActive(false);
         PlayerPrefs.SetInt("Current Level", level - 1);
-        Debug.Log("Confirm Panel" + level);
         SceneManager.LoadScene(levelToLoad);
     }
 

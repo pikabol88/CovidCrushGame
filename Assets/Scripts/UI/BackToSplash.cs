@@ -25,6 +25,15 @@ public class BackToSplash : MonoBehaviour
         gameStart = FindObjectOfType<GameStartManager>();
         board = FindObjectOfType<Board>();
         gameData = FindObjectOfType<GameData>();
+        Debug.Log("гружу сцену");
+        Debug.Log(board.level + 1);
+        Debug.Log(gameData.saveData.isActive[board.level + 1]);
+        if (!gameData.saveData.isActive[board.level + 1]) {
+            Debug.Log("неактивен");
+            gameData.saveData.stars[board.level] = 0;
+            gameData.saveData.hightScores[board.level] = 0;
+            gameData.Save();
+        }
     }
 
     IEnumerator WinCo() {

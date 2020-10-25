@@ -79,5 +79,5 @@ MonoBehaviour:
   levelGoals:
   - numberNeeded: 16
     numberCollected: 13
-    goalSprite: {fileID: 21300000, guid: 6141c57f71c04cc47900235717cee2d7, type: 3}
+    goalSprite: {fileID: 21300000, guid: 5f2691aec9f9c8f419f303f608849423, type: 3}
     matchValue: Slime

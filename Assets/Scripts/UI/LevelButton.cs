@@ -38,25 +38,31 @@ public class LevelButton : MonoBehaviour
     void LoadData() {
         if (gameData != null) {
             if(gameData.saveData == null) {
-                Debug.Log("GS = NULL");
             }
-            Debug.Log("size = " + gameData.saveData.isActive.Length);
             if (gameData.saveData.isActive[level - 1]) {
                 isActive = true;
             } else {
                 isActive = false;
             }
             starsActive = gameData.saveData.stars[level - 1];
-            Debug.Log("stars" + gameData.saveData.stars[level - 1]);
         } else {
             Debug.Log("null");
         }
     }
 
     void ActivateStars() {
-        Debug.Log("Active" + starsActive);
+       // Debug.Log("Active" + starsActive);
         for(int i = 0; i < starsActive; i++) {
-            stars[i].enabled = true;
+            if(level <= gameData.saveData.isActive.Length) {
+                if (gameData.saveData.isActive[level]) {
+                    stars[i].enabled = true;
+                } else {
+                    stars[i].enabled = false;
+                }
+            } else {
+                stars[i].enabled = true;
+            }
+           
         }
     }
     void DecideSprite() {

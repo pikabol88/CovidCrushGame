@@ -48,23 +48,12 @@ public class GameData : MonoBehaviour {
 
         //Create a route from the program to the file
         FileStream file = File.Create(Application.persistentDataPath + "/player.dat");
-
-        //Create a copy of save data
         SaveData data = new SaveData();
         data = saveData;
-
-        //Actually save the data in the file
         formatter.Serialize(file, data);
-
-        //Close the data stream
         file.Close();
 
-        Debug.Log("Saved");
-
-       // green.SetActive(true);
-       // red.SetActive(false);
-       // blue.SetActive(true);
-
+       // Debug.Log("Saved");
     }
 
     public void Load() {
@@ -74,7 +63,6 @@ public class GameData : MonoBehaviour {
             FileStream file = File.Open(Application.persistentDataPath + "/player.dat", FileMode.Open);
             saveData = formatter.Deserialize(file) as SaveData;
             file.Close();
-            Debug.Log("Loaded");
         } else {
             saveData = new SaveData();
             saveData.isActive = new bool[100];

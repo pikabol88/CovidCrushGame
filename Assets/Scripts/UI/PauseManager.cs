@@ -66,5 +66,6 @@ public class PauseManager : MonoBehaviour
 
     public void ExitGame() {
         SceneManager.LoadScene("Splash");
+        
     }
 }

@@ -26,11 +26,11 @@ public class LevelSelectManager : MonoBehaviour
                     currentLevel = i;                    
                 }
             }
-            if (gameData.saveData.stars[currentLevel] != 0) {
-                //Debug.Log("stars and score to zero");
-                //gameData.saveData.stars[currentLevel] = 0;
-                //gameData.saveData.hightScores[currentLevel] = 0;
-                //gameData.Save();
+            if (!gameData.saveData.isActive[currentLevel+1]) {
+                Debug.Log("stars and score to zero in start() ob lvl select");
+                gameData.saveData.stars[currentLevel] = 0;
+                gameData.saveData.hightScores[currentLevel] = 0;
+                gameData.Save();
             }
         }
         page = (int)Mathf.Floor(currentLevel / 9);

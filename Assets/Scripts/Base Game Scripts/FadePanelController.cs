@@ -56,7 +56,6 @@ public class FadePanelController : MonoBehaviour
     public void WinOK() {
         if (winPanelAnim != null ) {
             winPanelAnim.SetBool("Out", true);
-            Debug.Log("win");
             StartCoroutine(TryWinPanelWaitingCo());
           //  winPanelAnim.SetBool("Out", false);
         }
@@ -64,7 +63,6 @@ public class FadePanelController : MonoBehaviour
 
     public void TryOK() {
         if (tryPanelAnim != null ) {
-            Debug.Log("OUT = TRUE");
             tryPanelAnim.SetBool("Out", true);
             StartCoroutine(TryWinPanelWaitingCo());
           //  tryPanelAnim.SetBool("Out",false);
