@@ -18,8 +18,7 @@ public class FindMatches : MonoBehaviour {
     }
 
     public void FindAllMatches() {
-        StartCoroutine(FindAllMatchesCo());
-        
+        StartCoroutine(FindAllMatchesCo());        
     }
 
     //

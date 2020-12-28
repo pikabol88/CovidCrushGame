@@ -77,17 +77,17 @@ MonoBehaviour:
     counterValue: 150
   levelGoals:
   - numberNeeded: 30
-    numberCollected: 42
+    numberCollected: 0
     goalSprite: {fileID: 7020242693683684957, guid: 47aeff7d5dcbbd843bd370aff2373859,
       type: 3}
     matchValue: Red Dot
   - numberNeeded: 30
-    numberCollected: 34
+    numberCollected: 0
     goalSprite: {fileID: -4993135451479456716, guid: c04aaf0ba0ceb51409637abfa90d6080,
       type: 3}
     matchValue: Orange Dot
   - numberNeeded: 30
-    numberCollected: 32
+    numberCollected: 0
     goalSprite: {fileID: -4627507694559128364, guid: 47aeff7d5dcbbd843bd370aff2373859,
       type: 3}
     matchValue: Salmon Dot

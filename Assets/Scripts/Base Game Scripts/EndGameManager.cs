@@ -80,7 +80,7 @@ public class EndGameManager : MonoBehaviour
     }
     private bool SlimeDeadlockCheck() {
         if(board.slimeTiles != null) {
-            if( SlimeCounter() >= board.width * board.height - 3) {
+            if( SlimeCounter() >= board.width * board.height - 5) {
                 return true;
             }
         }

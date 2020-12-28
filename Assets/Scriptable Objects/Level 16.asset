@@ -181,16 +181,16 @@ MonoBehaviour:
     counterValue: 80
   levelGoals:
   - numberNeeded: 15
-    numberCollected: 13
+    numberCollected: 0
     goalSprite: {fileID: 21300000, guid: 7b92aba5cb4f39c4ab4662d5aa96d2d5, type: 3}
     matchValue: Breakable
   - numberNeeded: 50
-    numberCollected: 90
+    numberCollected: 0
     goalSprite: {fileID: -4627507694559128364, guid: 47aeff7d5dcbbd843bd370aff2373859,
       type: 3}
     matchValue: Salmon Dot
   - numberNeeded: 50
-    numberCollected: 65
+    numberCollected: 0
     goalSprite: {fileID: 7020242693683684957, guid: 47aeff7d5dcbbd843bd370aff2373859,
       type: 3}
     matchValue: Red Dot

@@ -151,6 +151,6 @@ MonoBehaviour:
     counterValue: 300
   levelGoals:
   - numberNeeded: 15
-    numberCollected: 12
+    numberCollected: 0
     goalSprite: {fileID: 21300000, guid: 7b92aba5cb4f39c4ab4662d5aa96d2d5, type: 3}
     matchValue: Breakable

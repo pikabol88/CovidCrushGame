@@ -63,27 +63,6 @@ MonoBehaviour:
   - x: 6
     y: 9
     tileKind: 4
-  - x: 0
-    y: 3
-    tileKind: 0
-  - x: 1
-    y: 3
-    tileKind: 0
-  - x: 2
-    y: 3
-    tileKind: 0
-  - x: 3
-    y: 3
-    tileKind: 0
-  - x: 4
-    y: 3
-    tileKind: 0
-  - x: 5
-    y: 3
-    tileKind: 0
-  - x: 6
-    y: 3
-    tileKind: 0
   - x: 6
     y: 5
     tileKind: 0
@@ -123,7 +102,7 @@ MonoBehaviour:
     numberCollected: 0
     goalSprite: {fileID: 21300000, guid: f8f20d4a8a1eb7c438081ae3c92c826b, type: 3}
     matchValue: Slime
-  - numberNeeded: 14
+  - numberNeeded: 7
     numberCollected: 0
     goalSprite: {fileID: 21300000, guid: 7b92aba5cb4f39c4ab4662d5aa96d2d5, type: 3}
     matchValue: Breakable

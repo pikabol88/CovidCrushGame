@@ -214,16 +214,20 @@ public class Dot : MonoBehaviour
     }
 
     void MovePiecesActual(Vector2Int direction) {
-        otherDot = board.allDots[column + direction.x, row + direction.y];
-        previusColumn = column;
-        previusRow = row;
-        if (board.lockTiles[column, row] == null && board.lockTiles[column + (int)direction.x, row + (int)direction.y] == null) {
-            if (otherDot != null) {
-                otherDot.GetComponent<Dot>().column += -1 * direction.x;
-                otherDot.GetComponent<Dot>().row += -1 * direction.y;
-                column += direction.x;
-                row += direction.y;
-                StartCoroutine(CheckMoveCo());
+        if ((column + direction.x) >= 0 && row + direction.y >= 0) {
+            otherDot = board.allDots[column + direction.x, row + direction.y];
+            previusColumn = column;
+            previusRow = row;
+            if (board.lockTiles[column, row] == null && board.lockTiles[column + (int)direction.x, row + (int)direction.y] == null) {
+                if (otherDot != null) {
+                    otherDot.GetComponent<Dot>().column += -1 * direction.x;
+                    otherDot.GetComponent<Dot>().row += -1 * direction.y;
+                    column += direction.x;
+                    row += direction.y;
+                    StartCoroutine(CheckMoveCo());
+                } else {
+                    board.currentState = GameState.MOVE;
+                }
             } else {
                 board.currentState = GameState.MOVE;
             }

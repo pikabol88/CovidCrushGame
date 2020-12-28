@@ -190,15 +190,15 @@ MonoBehaviour:
     counterValue: 100
   levelGoals:
   - numberNeeded: 27
-    numberCollected: 25
+    numberCollected: 0
     goalSprite: {fileID: 21300000, guid: 59e7e7e6f69871d4383e238de137507c, type: 3}
     matchValue: Concrete
   - numberNeeded: 18
-    numberCollected: 18
+    numberCollected: 0
     goalSprite: {fileID: 21300000, guid: 7b92aba5cb4f39c4ab4662d5aa96d2d5, type: 3}
     matchValue: Breakable
   - numberNeeded: 30
-    numberCollected: 64
+    numberCollected: 0
     goalSprite: {fileID: -4899308033843140782, guid: 47aeff7d5dcbbd843bd370aff2373859,
       type: 3}
     matchValue: Yellow Dot

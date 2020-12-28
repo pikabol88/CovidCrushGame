@@ -27,17 +27,17 @@ MonoBehaviour:
     counterValue: 30
   levelGoals:
   - numberNeeded: 3
-    numberCollected: 3
+    numberCollected: 0
     goalSprite: {fileID: -4899308033843140782, guid: 47aeff7d5dcbbd843bd370aff2373859,
       type: 3}
     matchValue: Yellow Dot
   - numberNeeded: 3
-    numberCollected: 3
+    numberCollected: 0
     goalSprite: {fileID: -3738844683066291146, guid: 47aeff7d5dcbbd843bd370aff2373859,
       type: 3}
     matchValue: Teel Dot
   - numberNeeded: 3
-    numberCollected: 3
+    numberCollected: 0
     goalSprite: {fileID: 7020242693683684957, guid: 47aeff7d5dcbbd843bd370aff2373859,
       type: 3}
     matchValue: Red Dot

@@ -111,6 +111,9 @@ public class HintManager : MonoBehaviour
         if (possibleMoves.Count > 0) {
             int pieceToUse = Random.Range(0, possibleMoves.Count);
             return possibleMoves[pieceToUse];
+        } else {
+            board.currentState = GameState.PAUSE;
+            StartCoroutine(board.ShuffleBoard());
         }
         return null; 
     }

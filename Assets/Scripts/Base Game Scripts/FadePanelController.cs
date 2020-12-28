@@ -12,11 +12,19 @@ public class FadePanelController : MonoBehaviour
     public Animator bubbleHelpAnim;
     public Animator stoneHelpAnim;
     public Animator lockHelpAnim;
+    public Animator finalHelpAnim;
 
     public void OK() {
         if (panelAnim != null && gameInfoAnim != null) {
             panelAnim.SetBool("Out", true);
             gameInfoAnim.SetBool("Out", true);
+            StartCoroutine(GameStartCo());
+        }
+    }
+
+    public void FinalOk() {
+        if (finalHelpAnim != null ) {
+            finalHelpAnim.SetBool("Out", true);
             StartCoroutine(GameStartCo());
         }
     }

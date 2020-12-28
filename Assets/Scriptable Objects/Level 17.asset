@@ -78,6 +78,6 @@ MonoBehaviour:
     counterValue: 100
   levelGoals:
   - numberNeeded: 16
-    numberCollected: 13
+    numberCollected: 0
     goalSprite: {fileID: 21300000, guid: 5f2691aec9f9c8f419f303f608849423, type: 3}
     matchValue: Slime

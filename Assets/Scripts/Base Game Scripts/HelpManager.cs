@@ -9,6 +9,9 @@ public class HelpManager : MonoBehaviour {
     public GameObject stoneHelp;
     public GameObject[] roolHelp;
     public GameObject rulesHelp;
+    public int finalLevel;
+
+    public GameObject finalHelp;
 
     public GameObject leftArrow;
     public GameObject rightArrow;
@@ -27,6 +30,7 @@ public class HelpManager : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         leftArrow.SetActive(false);
+        DeactivateAll();
     }
 
 
@@ -84,6 +88,8 @@ public class HelpManager : MonoBehaviour {
             ShowStoneHelpPanel();
         } else if (level == firstBubbleLevel) {
             ShowBubbleHelpPanel();
+        } else if (level == finalLevel) {
+            ShowFinalHelpPanel();
         } else {
             DeactivateAll();
         }
@@ -115,12 +121,16 @@ public class HelpManager : MonoBehaviour {
         stoneHelp.SetActive(true);
     }
 
+    private void ShowFinalHelpPanel() {
+        finalHelp.SetActive(true);
+    }
+
     private void DeactivateAll() {
         iceHelp.SetActive(false);
         stoneHelp.SetActive(false);
         lockHelp.SetActive(false);
         bubbleHelp.SetActive(false);
-
+        finalHelp.SetActive(false);
     }
 }
 

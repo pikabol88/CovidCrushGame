@@ -223,11 +223,13 @@ public class Board : MonoBehaviour {
         if (column > 1 && row > 1) {
             if (allDots[column - 1, row] != null && allDots[column - 2, row] != null) {
                 if (allDots[column - 1, row].tag == piece.tag && allDots[column - 2, row].tag == piece.tag) {
+                    Debug.Log("Комбинация = " + column + "," + row);
                     return true;
                 }
             }
             if (allDots[column, row - 1] != null && allDots[column, row - 2] != null) {
                 if (allDots[column, row - 1].tag == piece.tag && allDots[column, row - 2].tag == piece.tag) {
+                    Debug.Log("Комбинация = " + column + "," + row);
                     return true;
                 }
             }
@@ -236,6 +238,7 @@ public class Board : MonoBehaviour {
             if (row > 1) {
                 if (allDots[column, row - 1] != null && allDots[column, row - 2] != null) {
                     if (allDots[column, row - 1].tag == piece.tag && allDots[column, row - 2].tag == piece.tag) {
+                        Debug.Log("Комбинация = " + column + "," + row);
                         return true;
                     }
                 }
@@ -243,6 +246,7 @@ public class Board : MonoBehaviour {
             if (column > 1) {
                 if (allDots[column - 1, row] != null && allDots[column - 2, row] != null) {
                     if (allDots[column - 1, row].tag == piece.tag && allDots[column - 2, row].tag == piece.tag) {
+                        Debug.Log("Комбинация = " + column + "," + row);
                         return true;
                     }
                 }
@@ -304,6 +308,18 @@ public class Board : MonoBehaviour {
         return matchType;
     }
 
+    private void DamageSpecialBlocks(int column, int row) {
+        if (lockTiles[column, row] != null) {
+            //if it does, give one damage.
+            lockTiles[column, row].TakeDamage(1);
+            if (lockTiles[column, row].hitPoints <= 0) {
+                lockTiles[column, row] = null;
+            }
+        }
+        DamageConcrete(column, row);
+        DamageSlime(column, row);
+    }
+
     private void CheckToMakeBombs() {
         //How many objects are in findMatches currentMatches?
         if (findMatches.currentMatches.Count > 3) {
@@ -316,6 +332,7 @@ public class Board : MonoBehaviour {
                     currentDot.isMatched = false;
                     currentDot.MakeColorBomb();
                     DamageBreakable(currentDot.column, currentDot.row);
+                    DamageSpecialBlocks(currentDot.column, currentDot.row);
                 } else {
                     if (currentDot.otherDot != null) {
                         Dot otherDot = currentDot.otherDot.GetComponent<Dot>();
@@ -323,6 +340,7 @@ public class Board : MonoBehaviour {
                             otherDot.isMatched = false;
                             otherDot.MakeColorBomb();
                             DamageBreakable(otherDot.column, otherDot.row);
+                            DamageSpecialBlocks(otherDot.column, otherDot.row);
                         }
                     }
                 }
@@ -333,12 +351,14 @@ public class Board : MonoBehaviour {
                     currentDot.isMatched = false;
                     currentDot.MakeAdjacentBomb();
                     DamageBreakable(currentDot.column, currentDot.row);
+                    DamageSpecialBlocks(currentDot.column, currentDot.row);
                 } else if (currentDot.otherDot != null) {
                     Dot otherDot = currentDot.otherDot.GetComponent<Dot>();
                     if (otherDot.isMatched && otherDot.tag == typeOfMatch.color) {
                         otherDot.isMatched = false;
                         otherDot.MakeAdjacentBomb();
                         DamageBreakable(otherDot.column, otherDot.row);
+                        DamageSpecialBlocks(otherDot.column, otherDot.row);
                     }
                 }
             } else if (typeOfMatch.type == 3) {
@@ -347,12 +367,14 @@ public class Board : MonoBehaviour {
                         Debug.Log("Тип бомбы линейный - уничтожить лед на бомбе!");
                         Debug.Log(currentDot.column + currentDot.row);
                         DamageBreakable(currentDot.column, currentDot.row);
+                        DamageSpecialBlocks(currentDot.column, currentDot.row);
                         break;
                     case 2:
                         Debug.Log("Тип бомбы линейный - уничтожить лед на бомбе!");
                         Dot otherDot = currentDot.otherDot.GetComponent<Dot>();
                         Debug.Log(otherDot.column + otherDot.row);
                         DamageBreakable(otherDot.column, otherDot.row);
+                        DamageSpecialBlocks(otherDot.column, otherDot.row);
                         break;
                     default:
                         Debug.Log("НУУУУУУУУУУУУУу");
@@ -397,6 +419,7 @@ public class Board : MonoBehaviour {
 
     private void DestroyMatchesAt(int column, int row) {
         if (allDots[column, row].GetComponent<Dot>().isMatched) {
+            Debug.Log("Уничтожение = " + column + "," + row);
             //Does a tile need to break?
             if (breakableTiles[column, row] != null) {
                 //if it does, give one damage.
@@ -450,9 +473,7 @@ public class Board : MonoBehaviour {
         StartCoroutine(DecreaseRowCo2());
         hintManager.hintDelaySeconds = hintManager.hintDelay;
         hintManager.Update();
-        CheckToMakeBombs();
-        
-        
+        CheckToMakeBombs();        
     }
 
     private void DamageConcrete(int column, int row) {        
@@ -551,8 +572,8 @@ public class Board : MonoBehaviour {
             }
         }
         yield return new WaitForSeconds(refillDelay * 0.5f);
-        hintManager.hintDelaySeconds = hintManager.hintDelay;
-        hintManager.Update();
+       /* hintManager.hintDelaySeconds = hintManager.hintDelay;
+        hintManager.Update();*/
         //   Debug.Log("Refilling the board");
         StartCoroutine(FillBoardCo());
     }
@@ -616,29 +637,45 @@ public class Board : MonoBehaviour {
         yield return new WaitForSeconds(refillDelay);
         RefillBoard();
         yield return new WaitForSeconds(refillDelay);
-        hintManager.hintDelaySeconds = hintManager.hintDelay;
-        hintManager.Update();
+      //  hintManager.hintDelaySeconds = hintManager.hintDelay;
+      //  hintManager.Update();
         while (MatchesOnBoard()) {
-            // Debug.Log("MATCHES AT");
+            Debug.Log("MATCHES AT THE BOARD");
             CheckToMakeBombs();
             streakValue++;
             DestroyMatches();
-            //PROBLEM
             hintManager.hintDelaySeconds = hintManager.hintDelay;
-            hintManager.Update();
-            MatchesOnBoard();
+            hintManager.DestroyHint();
+            //PROBLEM
+            /* hintManager.hintDelaySeconds = hintManager.hintDelay;
+             hintManager.Update();*/
+            //MatchesOnBoard();
             yield break;
         }
         currentDot = null;
-        CheckToMakeSlime();
-        //to deside slime provlem
-        yield return new WaitForSeconds(refillDelay);
-        if (IsDeadlocked()) {
-            StartCoroutine(ShuffleBoard());
+        yield return new WaitForSeconds(refillDelay/2);
+        if (MatchesOnBoard()) {
+            //yield return new WaitForSeconds(refillDelay);
+            Debug.Log("MATCHES AT THE BOARD");
+            CheckToMakeBombs();
+            streakValue++;
+            DestroyMatches();
+            hintManager.hintDelaySeconds = hintManager.hintDelay;
+            hintManager.DestroyHint();
+            // hintManager.Update();
+            yield break;
         }
-        yield return new WaitForSeconds(refillDelay);
-       
-        //  Debug.Log("Done Refilling");
+
+        CheckToMakeSlime();
+     
+        yield return new WaitForSeconds(refillDelay/2);
+        //   hintManager.Update();
+       /* if (IsDeadlocked()) {
+
+            StartCoroutine(ShuffleBoard());
+            hintManager.hintDelaySeconds = hintManager.hintDelay;
+            hintManager.DestroyHint();
+        }*/
         System.GC.Collect();
         if (currentState != GameState.PAUSE) {
             currentState = GameState.MOVE;
@@ -646,7 +683,20 @@ public class Board : MonoBehaviour {
         currentState = GameState.MOVE;
         streakValue = 1;
         makeSlime = true;
-       
+        // hintManager.hintDelaySeconds = hintManager.hintDelay;
+        // hintManager.Update();
+        /*   if (MatchesOnBoard()) {
+               Debug.Log("MATCHES AT THE BOARD");
+               CheckToMakeBombs();
+               streakValue++;
+               DestroyMatches();
+               hintManager.hintDelaySeconds = hintManager.hintDelay;
+              // hintManager.Update();
+               yield break;
+           }*/
+        hintManager.hintDelaySeconds = hintManager.hintDelay;
+        hintManager.DestroyHint();
+        hintManager.Update();
     }
 
     private void CheckToMakeSlime() {
@@ -654,7 +704,6 @@ public class Board : MonoBehaviour {
             for(int j = 0; j < height; j++) {
                 if(slimeTiles[i,j]!=null && makeSlime) {
                     MakeNewSlime();
-                    hintManager.Update();
                     return;
                 }
             }
@@ -696,8 +745,15 @@ public class Board : MonoBehaviour {
             }
             loops++;
         }
-      
-        
+        hintManager.hintDelaySeconds = hintManager.hintDelay;
+        hintManager.DestroyHint();
+      //  hintManager.Update();
+       /* if (IsDeadlocked()) {
+            
+            currentState = GameState.PAUSE;
+            StartCoroutine(ShuffleBoard());
+        }*/
+
     }
 
 
@@ -776,6 +832,15 @@ public class Board : MonoBehaviour {
                     }
                 }
             }
+            if (j < height - 2) {
+                //Check if the dots above exist
+                if (allDots[i, j + 1] != null && allDots[i, j + 2] != null) {
+                    if (allDots[i, j + 1].tag == allDots[i, j].tag
+                        && allDots[i, j + 2].tag == allDots[i, j].tag) {
+                        return true;
+                    }
+                }
+            }
             if (j > 1) {
                 //Check if the dots above exist
                 if (allDots[i, j - 1] != null && allDots[i, j -2] != null) {
@@ -785,7 +850,7 @@ public class Board : MonoBehaviour {
                     }
                 }
             }
-            if (j > 0 && j < width - 1) {
+            if (j > 0 && j < height - 1) {
                 //Check if the dots above exist
                 if (allDots[i, j + 1] != null && allDots[i, j - 1] != null) {
                     if (allDots[i, j + 1].tag == allDots[i, j].tag
@@ -801,7 +866,7 @@ public class Board : MonoBehaviour {
     public bool SwitchAndCheck(int column, int row, Vector2 direction) {
         if (!concreteTiles[column, row] && !lockTiles[column, row] && !slimeTiles[column, row]) {
             SwitchPieces(column, row, direction);
-            if (CheckForMatches()/*CheckForMatches(column, row)*/) {
+            if (/*CheckForMatches()*/CheckForMatches(column, row)) {
                 SwitchPieces(column, row, direction);
                 return true;
             }
@@ -829,10 +894,11 @@ public class Board : MonoBehaviour {
                 }
             }
         }
+        currentState = GameState.PAUSE;
         return true;
     }
 
-    private IEnumerator ShuffleBoard() {
+    public IEnumerator ShuffleBoard() {
         yield return new WaitForSeconds(0.5f);
         //Create a list of game objects
         List<GameObject> newBoard = new List<GameObject>();
@@ -856,9 +922,14 @@ public class Board : MonoBehaviour {
                     //Assign the column to the piece
                     int maxIterations = 0;
 
-                    while (MatchesAt(i, j, newBoard[pieceToUse]) && maxIterations < 100) {
+                    while (MatchesAt(i, j, newBoard[pieceToUse]) && maxIterations < 200) {
                         pieceToUse = Random.Range(0, newBoard.Count);
                         maxIterations++;
+                        if (newBoard.Count == 3) {
+                            if (newBoard[0].tag == newBoard[1].tag&&newBoard[0].tag == newBoard[2].tag) {
+                                StartCoroutine(ShuffleBoard());
+                            }
+                        }
                     }
                     //Make a container for the piece
                     Dot piece = newBoard[pieceToUse].GetComponent<Dot>();
@@ -876,7 +947,32 @@ public class Board : MonoBehaviour {
         //Check if it's still deadlocked
         if (IsDeadlocked()) {
             StartCoroutine(ShuffleBoard());
+            if (MatchesOnBoard()) {
+                Debug.Log("MATCHES AT THE BOARD");
+                CheckToMakeBombs();
+                streakValue++;
+                DestroyMatches();
+                hintManager.hintDelaySeconds = hintManager.hintDelay;
+                hintManager.currentHint = null;
+               // hintManager.Update();
+                yield break;
+            }
         }
+       /* if (MatchesOnBoard()) {
+            Debug.Log("MATCHES AT THE BOARD");
+            CheckToMakeBombs();
+            streakValue++;
+            DestroyMatches();
+            hintManager.hintDelaySeconds = hintManager.hintDelay;
+            hintManager.currentHint = null;
+           // hintManager.Update();
+            yield break;
+        }*/
+        hintManager.hintDelaySeconds = hintManager.hintDelay;
+        hintManager.DestroyHint();
+        hintManager.Update();
+
+        currentState = GameState.MOVE;
     }
 
 }
