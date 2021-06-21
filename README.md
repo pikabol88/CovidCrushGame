@@ -1,7 +1,8 @@
 # CovidCrushGame
 ## Match Three Game
 
-First wave, second ... third? ...
+First wave, second, third? ...
+
 The mask has become an essential accessory, and leaving the house is a big risk ...
 Will it ever end!?
 
